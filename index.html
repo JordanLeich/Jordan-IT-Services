@@ -4,167 +4,48 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan IT Services</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome for Icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    /* General Reset */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body { font-family:'Roboto',sans-serif; line-height:1.6; color:#333; background:#f4f7f8; scroll-behavior: smooth; }
 
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      color: #333;
-      background-color: #f4f7f8;
-      scroll-behavior: smooth;
-    }
+    header { background: linear-gradient(to right, #0077cc, #00aaff); color:#fff; padding:80px 20px; text-align:center; }
+    header h1 { font-size:3rem; margin-bottom:10px; }
+    header p { font-size:1.2rem; }
 
-    header {
-      background: linear-gradient(to right, #0077cc, #00aaff);
-      color: #fff;
-      padding: 80px 20px;
-      text-align: center;
-    }
+    nav { background:#0077cc; display:flex; justify-content:center; padding:15px 0; }
+    nav a { color:#fff; text-decoration:none; margin:0 20px; font-weight:bold; transition:0.3s; }
+    nav a:hover { color:#ffeb3b; }
 
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
+    .container { max-width:1000px; margin:40px auto; padding:0 20px; }
+    section { margin-bottom:60px; }
+    h2 { text-align:center; color:#0077cc; margin-bottom:30px; font-size:2rem; position:relative; }
+    h2::after { content:''; display:block; width:60px; height:3px; background:#0077cc; margin:10px auto 0; border-radius:2px; }
 
-    header p {
-      font-size: 1.2rem;
-    }
+    .services-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:20px; }
+    .service-card { background:#fff; border-radius:12px; padding:25px 20px; text-align:center; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition: transform 0.3s, box-shadow 0.3s; }
+    .service-card:hover { transform: translateY(-8px); box-shadow:0 12px 20px rgba(0,0,0,0.15); }
+    .service-card i { font-size:2.5rem; color:#0077cc; margin-bottom:15px; }
+    .service-card h3 { font-size:1.2rem; margin-bottom:10px; }
+    .service-card p { font-size:0.95rem; color:#555; }
 
-    nav {
-      background: #0077cc;
-      display: flex;
-      justify-content: center;
-      padding: 15px 0;
-    }
+    .contact { background:#0077cc; color:#fff; text-align:center; padding:50px 20px; border-radius:12px; }
+    .contact h2 { color:#fff; }
+    .contact p { margin:10px 0; font-size:1.1rem; }
+    .contact a { color:#ffeb3b; text-decoration:none; font-weight:bold; }
 
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+    /* Contact Form */
+    form { max-width:600px; margin:20px auto 0; text-align:left; }
+    form label { display:block; margin-bottom:5px; font-weight:bold; color:#fff; }
+    form input, form textarea { width:100%; padding:10px; margin-bottom:15px; border-radius:5px; border:none; font-size:1rem; }
+    form input[type="submit"] { background:#ffeb3b; color:#0077cc; font-weight:bold; cursor:pointer; transition:0.3s; }
+    form input[type="submit"]:hover { background:#e6d600; }
+    
+    footer { text-align:center; padding:20px 0; font-size:0.9rem; color:#555; }
+    section[id] { scroll-margin-top:80px; }
 
-    nav a:hover {
-      color: #ffeb3b;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      margin-bottom: 60px;
-    }
-
-    h2 {
-      text-align: center;
-      color: #0077cc;
-      margin-bottom: 30px;
-      font-size: 2rem;
-      position: relative;
-    }
-
-    h2::after {
-      content: '';
-      display: block;
-      width: 60px;
-      height: 3px;
-      background: #0077cc;
-      margin: 10px auto 0;
-      border-radius: 2px;
-    }
-
-    /* Services Grid */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .service-card {
-      background: #fff;
-      border-radius: 12px;
-      padding: 25px 20px;
-      text-align: center;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
-    }
-
-    .service-card i {
-      font-size: 2.5rem;
-      color: #0077cc;
-      margin-bottom: 15px;
-    }
-
-    .service-card h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      font-size: 0.95rem;
-      color: #555;
-    }
-
-    /* Contact Section */
-    .contact {
-      background: #0077cc;
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
-      border-radius: 12px;
-    }
-
-    .contact h2 {
-      color: #fff;
-    }
-
-    .contact p {
-      margin: 10px 0;
-      font-size: 1.1rem;
-    }
-
-    .contact a {
-      color: #ffeb3b;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    /* Smooth scroll offset fix for nav links */
-    section[id] {
-      scroll-margin-top: 80px;
-    }
-
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
-    }
+    @media(max-width:600px){ header h1{ font-size:2rem; } }
   </style>
 </head>
 <body>
@@ -181,7 +62,6 @@
   </nav>
 
   <div class="container">
-
     <section id="about">
       <h2>About Me</h2>
       <p style="text-align:center; max-width:700px; margin:0 auto;">
@@ -231,9 +111,22 @@
       <p>Professional, reliable IT services with straightforward pricing.</p>
       <p>Email: <a href="mailto:jordanleich@gmail.com">jordanleich@gmail.com</a></p>
       <p>Phone: <a href="tel:+15867185346">(586) 718-5346</a></p>
-      <p>Send me a message or call today for assistance!</p>
-    </section>
+      <p>Send me a message below:</p>
 
+      <!-- Formspree Contact Form -->
+      <form action="https://formspree.io/f/mvzbllrz" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="_replyto" id="email" placeholder="Your Email" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="5" placeholder="Your Message" required></textarea>
+
+        <input type="submit" value="Send Message">
+      </form>
+    </section>
   </div>
 
   <footer>
