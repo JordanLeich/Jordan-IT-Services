@@ -4,91 +4,165 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jordan IT Services</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <style>
-    /* Reset some default styles */
-    body, h1, h2, h3, p, ul {
+    /* General Reset */
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Roboto', sans-serif;
       line-height: 1.6;
       color: #333;
-      background-color: #f9f9f9;
+      background-color: #f4f7f8;
+      scroll-behavior: smooth;
     }
 
     header {
-      background-color: #0077cc;
+      background: linear-gradient(to right, #0077cc, #00aaff);
       color: #fff;
-      padding: 40px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     header p {
       font-size: 1.2rem;
-      margin-top: 10px;
+    }
+
+    nav {
+      background: #0077cc;
+      display: flex;
+      justify-content: center;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
     }
 
     .container {
-      max-width: 900px;
-      margin: 30px auto;
+      max-width: 1000px;
+      margin: 40px auto;
       padding: 0 20px;
     }
 
     section {
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
 
     h2 {
+      text-align: center;
+      color: #0077cc;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: #0077cc;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    /* Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-card i {
+      font-size: 2.5rem;
       color: #0077cc;
       margin-bottom: 15px;
     }
 
-    ul.services {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    ul.services li {
-      background: #e0f0ff;
-      padding: 10px 15px;
+    .service-card h3 {
+      font-size: 1.2rem;
       margin-bottom: 10px;
-      border-radius: 5px;
     }
 
+    .service-card p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    /* Contact Section */
     .contact {
+      background: #0077cc;
+      color: #fff;
       text-align: center;
-      background-color: #0077cc;
-      color: white;
-      padding: 30px 20px;
-      border-radius: 10px;
+      padding: 50px 20px;
+      border-radius: 12px;
+    }
+
+    .contact h2 {
+      color: #fff;
+    }
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 1.1rem;
     }
 
     .contact a {
-      color: #fff;
+      color: #ffeb3b;
       text-decoration: none;
       font-weight: bold;
     }
 
     footer {
       text-align: center;
-      padding: 15px 0;
+      padding: 20px 0;
       font-size: 0.9rem;
       color: #555;
+    }
+
+    /* Smooth scroll offset fix for nav links */
+    section[id] {
+      scroll-margin-top: 80px;
     }
 
     @media (max-width: 600px) {
       header h1 {
         font-size: 2rem;
-      }
-
-      header p {
-        font-size: 1rem;
       }
     }
   </style>
@@ -97,34 +171,69 @@
 
   <header>
     <h1>Jordan IT Services</h1>
-    <p>Professional, reliable tech support for home users & small businesses</p>
+    <p>Reliable tech support for home users & small businesses</p>
   </header>
 
+  <nav>
+    <a href="#about">About Me</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <div class="container">
-    <section>
+
+    <section id="about">
       <h2>About Me</h2>
-      <p>Hi everyone — I’m a local IT Specialist offering tech support for home users and small businesses in the area. If you’re dealing with a slow computer, Wi-Fi issues, email problems, or setting up a new device, I can help.</p>
+      <p style="text-align:center; max-width:700px; margin:0 auto;">
+        Hi everyone — I’m a local IT Specialist offering tech support for home users and small businesses in the area. 
+        If you’re dealing with a slow computer, Wi-Fi issues, email problems, or setting up a new device, I can help.
+      </p>
     </section>
 
-    <section>
+    <section id="services">
       <h2>Services Offered</h2>
-      <ul class="services">
-        <li>PC & Mac tune-ups</li>
-        <li>New PC building</li>
-        <li>Virus/malware removal</li>
-        <li>New computer setup & data transfer</li>
-        <li>Wi-Fi troubleshooting & optimization</li>
-        <li>Microsoft 365 setup & support for small businesses</li>
-      </ul>
+      <div class="services-grid">
+        <div class="service-card">
+          <i class="fas fa-laptop"></i>
+          <h3>PC & Mac Tune-Ups</h3>
+          <p>Speed up your computer and keep it running smoothly.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-tools"></i>
+          <h3>New PC Building</h3>
+          <p>Custom-built computers tailored to your needs.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Virus & Malware Removal</h3>
+          <p>Protect your system and remove unwanted threats efficiently.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-desktop"></i>
+          <h3>Setup & Data Transfer</h3>
+          <p>Seamless setup of new devices with safe transfer of your data.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-wifi"></i>
+          <h3>Wi-Fi Optimization</h3>
+          <p>Fix slow connections and improve wireless network performance.</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-briefcase"></i>
+          <h3>Microsoft 365 Support</h3>
+          <p>Setup and support for small businesses using Microsoft 365.</p>
+        </div>
+      </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
       <h2>Contact Me</h2>
-      <p>Professional, reliable, and straightforward pricing.</p>
-      <p>Send me a message or call me today for assistance!</p>
+      <p>Professional, reliable IT services with straightforward pricing.</p>
       <p>Email: <a href="mailto:jordanleich@gmail.com">jordanleich@gmail.com</a></p>
-      <p>Phone: <a href="tel:+5867185346">(586) 718-5346</a></p>
+      <p>Phone: <a href="tel:+15867185346">(586) 718-5346</a></p>
+      <p>Send me a message or call today for assistance!</p>
     </section>
+
   </div>
 
   <footer>
