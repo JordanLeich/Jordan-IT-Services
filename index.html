@@ -3,24 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" sizes="32x32" href="Logo.png">
-<link rel="icon" type="image/png" sizes="16x16" href="Logo.png">
+<meta name="theme-color" content="#0b2a43">
+<link rel="icon" type="image/png" href="Logo.png">
 <link rel="apple-touch-icon" href="Logo.png">
 
 <title>Jordan IT Services | IT Support in Sterling Heights & Macomb County</title>
-
-<meta name="description" content="Jordan IT Services provides professional computer repair, Wi-Fi troubleshooting, virus removal, and Microsoft 365 support in Sterling Heights and Macomb County, Michigan. Reliable local IT support for homes and small businesses.">
-
-<meta name="keywords" content="IT support Sterling Heights, computer repair Sterling Heights, Macomb County IT services, virus removal Sterling Heights, Wi-Fi troubleshooting Macomb County, Microsoft 365 support Michigan">
-
+<meta name="description" content="Computer repair, Wi-Fi fixes, virus removal and Microsoft 365 setup in Sterling Heights and Macomb County, Michigan. Local IT support for homes and small businesses. Call (586) 718-5346.">
 <meta name="author" content="Jordan IT Services">
 
 <meta property="og:title" content="Jordan IT Services | Sterling Heights IT Support">
-<meta property="og:description" content="Professional local IT support for homes & small businesses in Sterling Heights and Macomb County.">
+<meta property="og:description" content="Local IT support for homes and small businesses in Sterling Heights and Macomb County.">
 <meta property="og:type" content="website">
+<meta property="og:image" content="Logo.png">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <script type="application/ld+json">
 {
@@ -29,8 +27,11 @@
   "name": "Jordan IT Services",
   "telephone": "+1-586-718-5346",
   "email": "jordanleich@gmail.com",
+  "image": "Logo.png",
   "areaServed": [
     { "@type": "City", "name": "Sterling Heights" },
+    { "@type": "City", "name": "Warren" },
+    { "@type": "City", "name": "Troy" },
     { "@type": "AdministrativeArea", "name": "Macomb County" }
   ],
   "address": {
@@ -39,451 +40,370 @@
     "addressRegion": "MI",
     "addressCountry": "US"
   },
-  "description": "Professional IT support, computer repair, Wi-Fi troubleshooting, virus removal, and Microsoft 365 setup for homes and small businesses."
+  "description": "IT support, computer repair, Wi-Fi troubleshooting, virus removal, and Microsoft 365 setup for homes and small businesses."
 }
 </script>
 
 <style>
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background:#f5f7fa;
-  color:#333;
-  scroll-behavior:smooth;
+:root {
+  --ink: #0b2a43;
+  --ink-soft: #46596b;
+  --blue: #0a66c2;
+  --blue-dark: #084f96;
+  --sky: #e8f1fa;
+  --paper: #f6f8fb;
+  --white: #fff;
+  --line: #d9e2ec;
+  --signal: #ffb703;
+  --ok: #1a7f4b;
+  --err: #b42318;
 }
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:72px; }
+body {
+  font-family:'Figtree', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.6;
+  font-size:1.0625rem;
+}
+img, video { max-width:100%; }
+a { color:var(--blue); }
+:focus-visible { outline:3px solid var(--signal); outline-offset:3px; border-radius:4px; }
 
+.skip { position:absolute; left:-999px; top:8px; background:var(--white); padding:8px 14px; z-index:2000; border-radius:6px; }
+.skip:focus { left:8px; }
+
+/* Header */
 header {
-  position:fixed;
-  width:100%;
-  top:0;
-  background:white;
-  box-shadow:0 2px 10px rgba(0,0,0,0.08);
-  z-index:1000;
+  position:fixed; inset:0 0 auto 0; z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
 }
-
 nav {
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 20px;
+  max-width:1100px; margin:auto; padding:12px 20px;
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
 }
+.brand { display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:800; font-size:1.15rem; }
+.brand img { width:34px; height:34px; border-radius:8px; object-fit:cover; }
+nav ul { display:flex; align-items:center; gap:22px; list-style:none; }
+nav ul a { text-decoration:none; color:var(--ink); font-weight:600; }
+nav ul a:hover { color:var(--blue); }
 
-nav h1 {
-  color:#0077cc;
-  font-size:1.4rem;
-}
-
-nav ul {
-  display:flex;
-  list-style:none;
-}
-
-nav ul li {
-  margin-left:20px;
-}
-
-nav a {
-  text-decoration:none;
-  color:#333;
-  font-weight:500;
-  transition:0.3s;
-}
-
-nav a:hover {
-  color:#0077cc;
-}
-
-.hero {
-  position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  overflow:hidden;
-  color:white;
-}
-
-.hero-video {
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  z-index:0;
-}
-
-.hero::after {
-  content:"";
-  position:absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.5);
-  z-index:1;
-}
-
-.hero-content {
-  position:relative;
-  z-index:2;
-  padding:20px;
-}
-
-.hero h2 {
-  font-size:3rem;
-  margin-bottom:20px;
-}
-
-.hero p {
-  font-size:1.2rem;
-  margin-bottom:30px;
-}
-
+/* Buttons */
 .btn {
-  display:inline-block;
-  padding:12px 25px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  transition:0.3s;
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:13px 26px; border-radius:10px; border:2px solid transparent;
+  font:inherit; font-weight:700; text-decoration:none; cursor:pointer;
+  transition:background .2s, color .2s, border-color .2s;
 }
+.btn-solid { background:var(--signal); color:var(--ink); }
+.btn-solid:hover { background:#ffc83d; }
+.btn-ghost { border-color:rgba(255,255,255,.7); color:var(--white); }
+.btn-ghost:hover { background:rgba(255,255,255,.14); }
+.btn-blue { background:var(--blue); color:var(--white); }
+.btn-blue:hover { background:var(--blue-dark); }
+.btn-sm { padding:9px 18px; }
 
-.btn-primary {
-  background:white;
-  color:#0077cc;
+/* Hero */
+.hero {
+  position:relative; min-height:88vh; display:flex; align-items:center;
+  background:var(--ink); color:var(--white); overflow:hidden; padding:110px 20px 70px;
 }
+.hero-video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.55; }
+.hero::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(11,42,67,.92) 0%, rgba(11,42,67,.55) 100%); }
+.hero-content { position:relative; z-index:2; max-width:1100px; margin:auto; width:100%; }
+.hero h2 { font-size:clamp(2.2rem, 5.5vw, 3.9rem); line-height:1.08; font-weight:800; max-width:15ch; letter-spacing:-.02em; margin-bottom:20px; }
+.hero p.lead { font-size:1.2rem; max-width:48ch; color:#dbe6f0; margin-bottom:30px; }
+.hero-actions { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:34px; }
+.trust { display:flex; flex-wrap:wrap; gap:10px 26px; list-style:none; color:#dbe6f0; font-weight:500; font-size:.98rem; }
+.trust li::before { content:"✓"; color:var(--signal); font-weight:800; margin-right:8px; }
 
-.btn-primary:hover {
-  background:#f0f0f0;
+/* Sections */
+.section { padding:88px 20px; }
+.section.alt { background:var(--white); border-block:1px solid var(--line); }
+.wrap { max-width:1100px; margin:auto; }
+.section h3 { font-size:clamp(1.7rem, 3.5vw, 2.3rem); line-height:1.15; letter-spacing:-.01em; margin-bottom:12px; }
+.intro { color:var(--ink-soft); max-width:60ch; margin-bottom:40px; }
+
+/* Services as a price list */
+.price-list { list-style:none; border-top:1px solid var(--line); }
+.price-list li {
+  display:grid; grid-template-columns:1fr auto; gap:6px 24px; align-items:baseline;
+  padding:22px 4px; border-bottom:1px solid var(--line);
 }
+.price-list h4 { font-size:1.15rem; }
+.price-list p { grid-column:1; color:var(--ink-soft); max-width:62ch; }
+.price-list .price { grid-column:2; grid-row:1 / span 2; font-weight:800; font-size:1.2rem; color:var(--blue); white-space:nowrap; align-self:center; }
+.price-list .price small { display:block; font-weight:500; font-size:.8rem; color:var(--ink-soft); text-align:right; }
+.note { margin-top:18px; color:var(--ink-soft); font-size:.95rem; }
 
-.section {
-  padding:100px 20px;
-  max-width:1100px;
-  margin:auto;
+/* Process */
+.steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px,1fr)); gap:32px; list-style:none; counter-reset:step; }
+.steps li { counter-increment:step; }
+.steps li::before {
+  content:counter(step); display:grid; place-items:center; width:40px; height:40px;
+  border-radius:50%; background:var(--blue); color:var(--white); font-weight:800; margin-bottom:14px;
 }
+.steps h4 { font-size:1.1rem; margin-bottom:4px; }
+.steps p { color:var(--ink-soft); }
 
-.section h3 {
-  text-align:center;
-  font-size:2rem;
-  margin-bottom:50px;
-  color:#0077cc;
+/* Reviews */
+.reviews { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:24px; margin-bottom:30px; }
+blockquote { background:var(--white); border:1px solid var(--line); border-left:5px solid var(--signal); border-radius:10px; padding:26px; }
+blockquote .stars { color:#e29f00; letter-spacing:2px; margin-bottom:8px; }
+blockquote cite { display:block; margin-top:12px; font-style:normal; font-weight:700; }
+
+/* Areas */
+.areas { display:flex; flex-wrap:wrap; gap:10px; list-style:none; margin-top:24px; }
+.areas li { background:var(--sky); color:var(--ink); padding:7px 16px; border-radius:999px; font-weight:600; font-size:.95rem; }
+
+/* Contact */
+.contact { display:grid; grid-template-columns:1fr 1.2fr; gap:48px; align-items:start; }
+.contact-direct { list-style:none; margin-top:24px; display:grid; gap:14px; }
+.contact-direct a { font-weight:700; font-size:1.15rem; text-decoration:none; }
+.contact-direct a:hover { text-decoration:underline; }
+.contact-direct span { display:block; font-size:.9rem; color:var(--ink-soft); font-weight:500; }
+form { background:var(--white); border:1px solid var(--line); border-radius:14px; padding:28px; }
+label { display:block; font-weight:600; margin-bottom:14px; }
+input, textarea {
+  display:block; width:100%; margin-top:6px; padding:12px 14px;
+  font:inherit; color:var(--ink); background:var(--paper);
+  border:1.5px solid var(--line); border-radius:8px;
 }
+input:focus, textarea:focus { border-color:var(--blue); outline:none; box-shadow:0 0 0 3px rgba(10,102,194,.2); }
+.hp { position:absolute; left:-9999px; }
+.form-status { margin-top:14px; font-weight:600; min-height:1.5em; }
+.form-status.ok { color:var(--ok); }
+.form-status.err { color:var(--err); }
 
-.services-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
-}
+footer { background:var(--ink); color:#c9d6e2; text-align:center; padding:28px 20px 90px; font-size:.95rem; }
+footer a { color:var(--white); }
 
-.card {
-  background:white;
-  padding:30px;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.08);
-  text-align:center;
-  transition:0.4s;
-  opacity:0;
-  transform:translateY(40px);
-}
+/* Mobile call bar */
+.callbar { display:none; }
 
-.card.visible {
-  opacity:1;
-  transform:translateY(0);
-}
+/* Gentle reveal: only when JS is running, never hides content otherwise */
+.js .reveal { opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease; }
+.js .reveal.in { opacity:1; transform:none; }
 
-.card:hover {
-  transform:translateY(-8px);
-}
-
-.card i {
-  font-size:2.5rem;
-  color:#0077cc;
-  margin-bottom:15px;
-}
-
-.section:nth-child(even) {
-  background: #ffffff;
-}
-
-.btn-primary:hover {
-  background:#e6f2ff;
-  transform:scale(1.05);
-}
-
-.testimonials {
-  text-align:center;
-}
-
-.testimonial {
-  max-width:600px;
-  margin:20px auto;
-  font-style:italic;
-}
-
-.contact-box {
-  background:#0077cc;
-  padding:40px;
-  border-radius:15px;
-  color:white;
-}
-
-form input, form textarea {
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border:none;
-  border-radius:8px;
-}
-
-form button {
-  background:white;
-  color:#0077cc;
-  padding:12px;
-  border:none;
-  border-radius:25px;
-  font-weight:600;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-form button:hover {
-  background:#f0f0f0;
-}
-
-.success-message {
-  display:none;
-  margin-top:15px;
-  font-weight:600;
-}
-
-footer {
-  text-align:center;
-  padding:25px;
-  background:#111;
-  color:white;
-  margin-top:50px;
-}
-
-/* Page fade-in */
-body {
-  opacity: 0;
-  transition: opacity 1.2s ease;
-}
-
-body.loaded {
-  opacity: 1;
-}
-
-/* Headline animation */
-.hero-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  overflow: hidden;
-}
-
-.hero-title .line {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: slideUp 0.8s ease forwards;
-}
-
-.hero-title .delay {
-  animation-delay: 0.5s;
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
+@media (max-width:760px) {
+  nav ul li:not(:last-child) { display:none; }
+  .hero { min-height:auto; padding-top:100px; }
+  .contact { grid-template-columns:1fr; gap:28px; }
+  .price-list li { grid-template-columns:1fr; }
+  .price-list .price { grid-column:1; grid-row:auto; }
+  .price-list .price small { text-align:left; display:inline; margin-left:6px; }
+  .callbar {
+    display:flex; position:fixed; inset:auto 0 0 0; z-index:900; gap:10px; padding:10px 14px;
+    background:var(--white); border-top:1px solid var(--line);
   }
+  .callbar .btn { flex:1; padding:12px; }
 }
-
-@media(max-width:768px){
-  .hero h2 { font-size:2.2rem; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior:auto; }
+  .js .reveal { opacity:1; transform:none; transition:none; }
+  .hero-video { display:none; }
 }
 </style>
 </head>
 
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
 <header>
-<nav>
-  <h1>Jordan IT Services</h1>
+<nav aria-label="Main">
+  <a class="brand" href="#top"><img src="Logo.png" alt="" onerror="this.style.display='none'">Jordan IT Services</a>
   <ul>
     <li><a href="#services">Services</a></li>
+    <li><a href="#reviews">Reviews</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a class="btn btn-blue btn-sm" href="tel:+15867185346">Call (586) 718-5346</a></li>
   </ul>
 </nav>
 </header>
 
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
+<main id="main">
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
     <source src="hero-video.mp4" type="video/mp4">
   </video>
-
   <div class="hero-content">
-    <h2 class="hero-title">
-  <span class="line">Reliable IT Support</span><br>
-  <span class="line delay">in Sterling Heights</span>
-</h2>
-    <p>Professional tech support for homes & small businesses in Macomb County</p>
-	<p style="margin-top:10px;font-weight:500;">
-	⚡ Typically responds within a few hours
-</p>
-    <a href="#contact" class="btn btn-primary">Get Help Now</a>
+    <h2>Reliable IT support in Sterling Heights</h2>
+    <p class="lead">Computer repair, Wi-Fi fixes and Microsoft 365 setup for homes and small businesses across Macomb County.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="tel:+15867185346">Call (586) 718-5346</a>
+      <a class="btn btn-ghost" href="#contact">Send a message</a>
+    </div>
+    <ul class="trust">
+      <li>Usually replies within a few hours</li>
+      <li>Clear pricing before work starts</li>
+      <li>Local and 5-star reviewed</li>
+    </ul>
   </div>
 </section>
 
 <section id="services" class="section">
-  <h3>Services</h3>
-<div class="services-grid">
-
-<div class="card">
-<i class="fas fa-laptop"></i>
-<h4>PC & Mac Tune-Ups</h4>
-<p>Speed up slow computers, remove junk files, install updates, and improve performance.</p>
-<p><strong>Starting at $80</strong></p>
-</div>
-
-<div class="card">
-<i class="fas fa-tools"></i>
-<h4>Custom PC Builds</h4>
-<p>Custom-built computers tailored for gaming, productivity, or business needs.</p>
-<p><strong>Starting at $150</strong></p>
-</div>
-
-<div class="card">
-<i class="fas fa-shield-virus"></i>
-<h4>Virus Removal</h4>
-<p>Remove malware, spyware, and viruses while securing your system.</p>
-<p><strong>Starting at $120</strong></p>
-</div>
-
-<div class="card">
-<i class="fas fa-wifi"></i>
-<h4>Wi-Fi Optimization</h4>
-<p>Fix slow or unreliable internet by improving router setup and coverage.</p>
-<p><strong>Starting at $90</strong></p>
-</div>
-
-<div class="card">
-<i class="fas fa-briefcase"></i>
-<h4>Microsoft 365 Setup</h4>
-<p>Email setup, security configuration, and business productivity tools.</p>
-<p><strong>Starting at $100</strong></p>
-</div>
-
-<div class="card">
-<i class="fas fa-desktop"></i>
-<h4>New Device Setup</h4>
-<p>Complete setup of new computers, printers, and devices.</p>
-<p><strong>Starting at $80</strong></p>
-</div>
-
-</div>
-</section>
-
-<section class="section testimonials">
-<h3>What Clients Say</h3>
-
-<div class="testimonial">
-⭐ ⭐ ⭐ ⭐ ⭐ <br>
-"Jordan fixed my slow computer and set up our Wi-Fi perfectly. Very professional and affordable."  
-<br><strong>— Sarah M.</strong>
-</div>
-
-<div class="testimonial">
-⭐ ⭐ ⭐ ⭐ ⭐ <br>
-"Quick response and solved my printer and laptop issues the same day."  
-<br><strong>— Mike T.</strong>
-</div>
-
-<div style="margin-top:30px;">
-<a href="https://www.google.com/maps/place/Jordan+IT+Services/@42.6256769,-83.0122348,12z/data=!4m16!1m9!3m8!1s0xa7c60ac09235de3f:0xa80204030b585988!2sJordan+IT+Services!8m2!3d42.625677!4d-83.0122348!9m1!1b1!16s%2Fg%2F11y_hjqtkv!3m5!1s0xa7c60ac09235de3f:0xa80204030b585988!8m2!3d42.625677!4d-83.0122348!16s%2Fg%2F11y_hjqtkv"
-target="_blank"
-class="btn btn-primary">
-⭐ Read More Reviews
-</a>
-</div>
-
-</section>
-
-<section class="section">
-<h3>Serving Macomb County & Nearby Cities</h3>
-
-<p style="text-align:center; max-width:800px; margin:auto;">
-Jordan IT Services proudly provides professional computer repair and IT support throughout Macomb County and nearby areas including:
-</p>
-
-<p style="text-align:center; margin-top:20px;">
-Sterling Heights • Warren • Troy • Clinton Township • Shelby Township • Utica • Macomb Township • Rochester Hills • Fraser • Roseville
-</p>
-
-<p style="text-align:center; max-width:800px; margin:20px auto;">
-Whether you need help with a slow computer, Wi-Fi issues, virus removal, printer problems, or Microsoft 365 setup, I provide reliable local support for homeowners and small businesses.
-</p>
-</section>
-
-<section id="contact" class="section">
-  <h3>Contact Me</h3>
-  <div class="contact-box">
-    <p>Email: jordanleich@gmail.com</p>
-    <p>Phone: (586) 718-5346</p>
-
-    <form action="https://formspree.io/f/mvzbllrz" method="POST" id="contactForm">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="_replyto" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-      <div class="success-message" id="successMessage">Thank you! Your message has been sent.</div>
-    </form>
+  <div class="wrap reveal">
+    <h3>Services and pricing</h3>
+    <p class="intro">Straightforward starting prices. You get a firm quote before I begin.</p>
+    <ul class="price-list">
+      <li>
+        <h4>PC &amp; Mac tune-ups</h4>
+        <p>Speed up slow computers, clear junk files, install updates and improve performance.</p>
+        <div class="price">$80<small>and up</small></div>
+      </li>
+      <li>
+        <h4>Virus and malware removal</h4>
+        <p>Remove malware and spyware, then secure the system so it stays clean.</p>
+        <div class="price">$120<small>and up</small></div>
+      </li>
+      <li>
+        <h4>Wi-Fi optimization</h4>
+        <p>Fix slow or unreliable internet with better router setup and coverage.</p>
+        <div class="price">$90<small>and up</small></div>
+      </li>
+      <li>
+        <h4>Microsoft 365 setup</h4>
+        <p>Email setup, security configuration and productivity tools for your business.</p>
+        <div class="price">$100<small>and up</small></div>
+      </li>
+      <li>
+        <h4>New device setup</h4>
+        <p>Complete setup of new computers, printers and other devices, including moving your files over.</p>
+        <div class="price">$80<small>and up</small></div>
+      </li>
+      <li>
+        <h4>Custom PC builds</h4>
+        <p>Computers built for gaming, work or business needs.</p>
+        <div class="price">$150<small>and up</small></div>
+      </li>
+    </ul>
+    <p class="note">Not sure which service you need? Describe the problem and I'll point you in the right direction.</p>
   </div>
 </section>
 
+<section class="section alt">
+  <div class="wrap reveal">
+    <h3>How it works</h3>
+    <p class="intro">No jargon, no surprises.</p>
+    <ol class="steps">
+      <li><h4>Tell me what's wrong</h4><p>Call or send a message. I'll reply within a few hours.</p></li>
+      <li><h4>Get a clear quote</h4><p>You'll know the price before any work begins.</p></li>
+      <li><h4>Problem solved</h4><p>I fix it, explain what I did, and make sure everything works.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="reviews" class="section">
+  <div class="wrap reveal">
+    <h3>What clients say</h3>
+    <div class="reviews">
+      <blockquote>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>Jordan fixed my slow computer and set up our Wi-Fi perfectly. Very professional and affordable.</p>
+        <cite>Sarah M.</cite>
+      </blockquote>
+      <blockquote>
+        <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
+        <p>Quick response and solved my printer and laptop issues the same day.</p>
+        <cite>Mike T.</cite>
+      </blockquote>
+    </div>
+    <a class="btn btn-blue" target="_blank" rel="noopener" href="https://www.google.com/maps/place/Jordan+IT+Services/@42.6256769,-83.0122348,12z/data=!4m16!1m9!3m8!1s0xa7c60ac09235de3f:0xa80204030b585988!2sJordan+IT+Services!8m2!3d42.625677!4d-83.0122348!9m1!1b1!16s%2Fg%2F11y_hjqtkv!3m5!1s0xa7c60ac09235de3f:0xa80204030b585988!8m2!3d42.625677!4d-83.0122348!16s%2Fg%2F11y_hjqtkv">Read more reviews on Google</a>
+  </div>
+</section>
+
+<section class="section alt">
+  <div class="wrap reveal">
+    <h3>Serving Macomb County and nearby</h3>
+    <p class="intro">Local computer repair and IT support for homeowners and small businesses in:</p>
+    <ul class="areas">
+      <li>Sterling Heights</li><li>Warren</li><li>Troy</li><li>Clinton Township</li>
+      <li>Shelby Township</li><li>Utica</li><li>Macomb Township</li>
+      <li>Rochester Hills</li><li>Fraser</li><li>Roseville</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="wrap contact reveal">
+    <div>
+      <h3>Get help today</h3>
+      <p class="intro" style="margin-bottom:0">Call for the fastest answer, or send a message and I'll get back to you within a few hours.</p>
+      <ul class="contact-direct">
+        <li><span>Phone</span><a href="tel:+15867185346">(586) 718-5346</a></li>
+        <li><span>Email</span><a href="mailto:jordanleich@gmail.com">jordanleich@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <form action="https://formspree.io/f/mvzbllrz" method="POST" id="contactForm">
+      <label>Your name
+        <input type="text" name="name" autocomplete="name" required>
+      </label>
+      <label>Your email
+        <input type="email" name="email" autocomplete="email" required>
+      </label>
+      <label>What do you need help with?
+        <textarea name="message" rows="5" required></textarea>
+      </label>
+      <input class="hp" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn btn-blue" type="submit" id="sendBtn">Send message</button>
+      <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+</main>
+
 <footer>
-© 2026 Jordan IT Services | Sterling Heights & Macomb County IT Support
+  © 2026 Jordan IT Services · Sterling Heights &amp; Macomb County IT Support ·
+  <a href="tel:+15867185346">(586) 718-5346</a>
 </footer>
 
+<div class="callbar">
+  <a class="btn btn-blue" href="tel:+15867185346">Call now</a>
+  <a class="btn btn-solid" href="#contact">Message</a>
+</div>
+
 <script>
-const cards = document.querySelectorAll('.card');
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('visible');
-    }
-  });
-});
-cards.forEach(card=>observer.observe(card));
+document.documentElement.classList.add('js');
 
+// Reveal sections on scroll
+const io = 'IntersectionObserver' in window ? new IntersectionObserver((entries, o) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); o.unobserve(e.target); } });
+}, { threshold: 0.12 }) : null;
+document.querySelectorAll('.reveal').forEach(el => io ? io.observe(el) : el.classList.add('in'));
+
+// Contact form
 const form = document.getElementById('contactForm');
-form.addEventListener("submit", async function(e) {
-  e.preventDefault();
-  const data = new FormData(form);
-  const response = await fetch(form.action, {
-    method: form.method,
-    body: data,
-    headers: { 'Accept': 'application/json' }
-  });
+const statusEl = document.getElementById('formStatus');
+const btn = document.getElementById('sendBtn');
 
-  if (response.ok) {
-    document.getElementById('successMessage').style.display = 'block';
+form.addEventListener('submit', async e => {
+  e.preventDefault();
+  statusEl.className = 'form-status';
+  statusEl.textContent = '';
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (!res.ok) throw new Error('Request failed');
     form.reset();
+    statusEl.classList.add('ok');
+    statusEl.textContent = 'Message sent. I\'ll reply within a few hours.';
+  } catch (err) {
+    statusEl.classList.add('err');
+    statusEl.textContent = 'Message not sent. Please try again or call (586) 718-5346.';
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Send message';
   }
 });
 </script>
-
-<script>
-window.addEventListener("load", function() {
-  document.body.classList.add("loaded");
-});
-</script>
-
 </body>
 </html>
